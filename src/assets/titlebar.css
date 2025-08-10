@@ -1,0 +1,84 @@
+/* src/assets/titlebar.css */
+.titlebar {
+    background-color: black !important;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    -webkit-app-region: drag;
+    padding: 0 8px;
+    overflow: hidden;
+    cursor: default;
+}
+
+.window-btn {
+    background: none !important;
+    border-radius: 0 !important;
+    min-width: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    margin: 0 4px;
+    -webkit-app-region: no-drag;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition:
+        background-color 0.2s,
+        color 0.2s;
+}
+
+.window-icon {
+    font-size: 18px;
+    color: white;
+    pointer-events: none;
+    transition: color 0.2s;
+}
+
+/* === LIGHT THEME === */
+body[data-theme='light'] .window-icon {
+    color: white !important;
+}
+
+body[data-theme='light'] .window-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body[data-theme='light'] .window-btn:hover .window-icon {
+    color: white !important;
+}
+
+body[data-theme='light'] .window-btn.close:hover {
+    background-color: #e81123 !important;
+}
+
+body[data-theme='light'] .window-btn.close:hover .window-icon {
+    color: white !important;
+}
+
+/* === DARK THEME === */
+body[data-theme='dark'] .window-icon {
+    color: white !important;
+}
+
+body[data-theme='dark'] .window-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body[data-theme='dark'] .window-btn:hover .window-icon {
+    color: white !important;
+}
+
+body[data-theme='dark'] .window-btn.close:hover {
+    background-color: #e81123 !important;
+}
+
+body[data-theme='dark'] .window-btn.close:hover .window-icon {
+    color: white !important;
+}
+
+/* Eliminar scrollbars */
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
